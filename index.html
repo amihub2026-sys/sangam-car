@@ -66,36 +66,63 @@
 
 
 
-    <section class="section container" id="category">
-      <div class="title"><span></span>
-        <h2>Shop by Category</h2><span></span>
-      </div>
-      <div class="category-grid">
-        <article><img
-            src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
-          <h3>Interior Accessories</h3>
-        </article>
-        <article><img
-            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80">
-          <h3>Exterior Accessories</h3>
-        </article>
-        <article><img src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80">
-          <h3>Lighting</h3>
-        </article>
-        <article><img
-            src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=500&q=80">
-          <h3>Electronics</h3>
-        </article>
-        <article><img
-            src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80">
-          <h3>Performance</h3>
-        </article>
-        <article><img
-            src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=500&q=80">
-          <h3>Care & Cleaning</h3>
-        </article>
-      </div>
-    </section>
+   <section class="section container" id="category">
+
+  <div class="title">
+    <span></span>
+    <h2>Shop by Category</h2>
+    <span></span>
+  </div>
+
+  <div class="category-slider-wrapper">
+
+    <!-- Mobile Only -->
+    <button class="cat-arrow cat-prev" onclick="slideCategory(-1)">
+      &#10094;
+    </button>
+
+    <div class="category-grid" id="categorySlider">
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
+        <h3>Interior Accessories</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80">
+        <h3>Exterior Accessories</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80">
+        <h3>Lighting</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=500&q=80">
+        <h3>Electronics</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80">
+        <h3>Performance</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=500&q=80">
+        <h3>Care & Cleaning</h3>
+      </article>
+
+    </div>
+
+    <!-- Mobile Only -->
+    <button class="cat-arrow cat-next" onclick="slideCategory(1)">
+      &#10095;
+    </button>
+
+  </div>
+
+</section>
 
     <section class="trust-card container">
       <div><i class="fa-solid fa-award"></i><b>100% Quality</b><small>Premium products</small></div>
@@ -105,45 +132,79 @@
       <div><i class="fa-solid fa-headset"></i><b>24/7 Support</b><small>Always available</small></div>
     </section>
 
-    <section class="section light" id="products">
-      <div class="container">
-        <div class="title"><span></span>
-          <h2>Best Selling Products</h2><span></span>
+   <section class="section light" id="products">
+
+  <div class="container">
+
+    <div class="title">
+      <span></span>
+      <h2>Best Selling Products</h2>
+      <span></span>
+    </div>
+
+    <div class="product-slider-wrapper">
+
+      <!-- Mobile Only -->
+      <button class="product-arrow product-prev" onclick="slideProduct(-1)">
+        &#10094;
+      </button>
+
+      <div class="product-slider" id="productSlider">
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=500&q=80">
+          <h3>LED Headlight Bulbs</h3>
+          <p>₹2,999</p>
+          <small>★★★★★ (128)</small>
         </div>
-        <div class="product-slider" id="productSlider">
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=500&q=80">
-            <h3>LED Headlight Bulbs</h3>
-            <p>₹2,999</p><small>★★★★★ (128)</small>
-          </div>
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=500&q=80">
-            <h3>7D Floor Mats</h3>
-            <p>₹3,499</p><small>★★★★★ (96)</small>
-          </div>
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=500&q=80">
-            <h3>Car Dash Camera</h3>
-            <p>₹4,999</p><small>★★★★★ (112)</small>
-          </div>
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
-            <h3>Ambient LED Light</h3>
-            <p>₹2,499</p><small>★★★★★ (78)</small>
-          </div>
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80">
-            <h3>Premium Seat Covers</h3>
-            <p>₹6,999</p><small>★★★★★ (123)</small>
-          </div>
-          <div class="product"><img
-              src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&q=80">
-            <h3>Car Body Cover</h3>
-            <p>₹1,999</p><small>★★★★★ (87)</small>
-          </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=500&q=80">
+          <h3>7D Floor Mats</h3>
+          <p>₹3,499</p>
+          <small>★★★★★ (96)</small>
         </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=500&q=80">
+          <h3>Car Dash Camera</h3>
+          <p>₹4,999</p>
+          <small>★★★★★ (112)</small>
+        </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
+          <h3>Ambient LED Light</h3>
+          <p>₹2,499</p>
+          <small>★★★★★ (78)</small>
+        </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80">
+          <h3>Premium Seat Covers</h3>
+          <p>₹6,999</p>
+          <small>★★★★★ (123)</small>
+        </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=500&q=80">
+          <h3>Car Body Cover</h3>
+          <p>₹1,999</p>
+          <small>★★★★★ (87)</small>
+        </div>
+
       </div>
-    </section>
+
+      <!-- Mobile Only -->
+      <button class="product-arrow product-next" onclick="slideProduct(1)">
+        &#10095;
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -248,28 +309,53 @@
 
    
 
-    <section class="section container" id="gallery">
-      <div class="title"><span></span>
-        <h2>Our Gallery</h2><span></span>
-      </div>
-      <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=500&q=80">
-      </div>
-      <br>
+   <section class="section container" id="gallery">
 
-        <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80"><img
-          src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=500&q=80">
-      </div>
+    <div class="title">
+        <span></span>
+        <h2>Our Gallery</h2>
+        <span></span>
+    </div>
 
-    </section>
+    <div class="gallery-slider-wrapper">
+
+        <!-- Mobile Only -->
+        <button class="gallery-arrow gallery-prev" onclick="slideGallery(-1)">
+            &#10094;
+        </button>
+
+        <div class="gallery-grid" id="gallerySlider">
+
+            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1549927681-0b673b8243ab?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=500&q=80">
+
+            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=500&q=80">
+
+        </div>
+
+        <!-- Mobile Only -->
+        <button class="gallery-arrow gallery-next" onclick="slideGallery(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+</section>
 
     <section class="touch-section">
 
