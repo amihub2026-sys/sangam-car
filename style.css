@@ -606,24 +606,450 @@ nav a:hover:after {
     font-size: 24px
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px
+/* ================================
+ PREMIUM 3D VIDEO GALLERY
+================================ */
+
+
+.gallery-section{
+
+padding:90px 7%;
+
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#f3f8ff
+);
+
+overflow:hidden;
+
 }
 
-.gallery-grid img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 13px;
-    transition: .3s
+
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.05)
+
+
+.section-title span{
+
+color:#ffc107;
+
+font-weight:900;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
 }
 
+
+
+.section-title h2{
+
+font-size:42px;
+
+color:#082450;
+
+margin-top:12px;
+
+}
+
+
+
+
+.gallery-wrapper{
+
+height:500px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+
+
+.gallery-box{
+
+width:100%;
+
+height:100%;
+
+perspective:1400px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+
+.gallery-carousel{
+
+width:320px;
+
+height:270px;
+
+position:relative;
+
+transform-style:preserve-3d;
+
+transition:.8s ease;
+
+}
+
+
+
+.gallery-carousel video{
+
+position:absolute;
+
+width:320px;
+
+height:270px;
+
+object-fit:cover;
+
+border-radius:22px;
+
+border:6px solid white;
+
+box-shadow:
+
+0 20px 50px rgba(8,36,80,.25);
+
+cursor:pointer;
+
+background:#000;
+
+}
+
+
+
+/* 10 VIDEOS POSITION */
+
+
+.gallery-carousel video:nth-child(1){
+
+transform:
+rotateY(0deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(2){
+
+transform:
+rotateY(36deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(3){
+
+transform:
+rotateY(72deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(4){
+
+transform:
+rotateY(108deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(5){
+
+transform:
+rotateY(144deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(6){
+
+transform:
+rotateY(180deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(7){
+
+transform:
+rotateY(216deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(8){
+
+transform:
+rotateY(252deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(9){
+
+transform:
+rotateY(288deg)
+translateZ(520px);
+
+}
+
+
+.gallery-carousel video:nth-child(10){
+
+transform:
+rotateY(324deg)
+translateZ(520px);
+
+}
+
+
+
+
+
+/* BUTTON */
+
+
+.gallery-btn{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:#082450;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:20;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.2);
+
+}
+
+
+
+.gallery-btn:hover{
+
+background:#ffc107;
+
+color:#082450;
+
+}
+
+
+
+.gallery-btn.left{
+
+left:2%;
+
+}
+
+
+.gallery-btn.right{
+
+right:2%;
+
+}
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+.gallery-section{
+
+padding:60px 5%;
+
+}
+
+
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+
+
+.gallery-wrapper{
+
+height:350px;
+
+}
+
+
+
+.gallery-carousel,
+.gallery-carousel video{
+
+width:230px;
+
+height:190px;
+
+}
+
+
+
+
+.gallery-carousel video:nth-child(1){
+
+transform:
+rotateY(0deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(2){
+
+transform:
+rotateY(36deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(3){
+
+transform:
+rotateY(72deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(4){
+
+transform:
+rotateY(108deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(5){
+
+transform:
+rotateY(144deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(6){
+
+transform:
+rotateY(180deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(7){
+
+transform:
+rotateY(216deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(8){
+
+transform:
+rotateY(252deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(9){
+
+transform:
+rotateY(288deg)
+translateZ(320px);
+
+}
+
+
+.gallery-carousel video:nth-child(10){
+
+transform:
+rotateY(324deg)
+translateZ(320px);
+
+}
+
+
+
+.gallery-btn{
+
+width:40px;
+
+height:40px;
+
+font-size:16px;
+
+}
+
+
+
+}
+
+/* contact */
 .contact {
     background: #eef4fb
 }
