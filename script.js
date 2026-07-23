@@ -43,22 +43,153 @@ function slideProduct(direction){
 
 }
 
-function slideGallery(direction){
+const gallery = document.getElementById("galleryCarousel");
 
-    const slider=document.getElementById("gallerySlider");
+let angle = 0;
+let autoRotate;
 
-    const image=slider.querySelector("img");
 
-    if(!image) return;
 
-    const gap=20;
+function updateGallery(){
 
-    slider.scrollBy({
+    gallery.style.transform =
+    `rotateY(${angle}deg)`;
 
-        left:(image.offsetWidth+gap)*direction,
+}
 
-        behavior:"smooth"
+
+
+
+function rotateGallery(direction){
+
+    clearInterval(autoRotate);
+
+
+    if(direction === 1){
+        angle -= 36;
+    }
+    else{
+        angle += 36;
+    }
+
+
+    updateGallery();
+
+    startAutoRotate();
+
+}
+
+
+
+
+
+function startAutoRotate(){
+
+    clearInterval(autoRotate);
+
+
+    autoRotate = setInterval(()=>{
+
+        angle -= 36;
+
+        updateGallery();
+
+    },3000);
+
+}
+
+
+
+startAutoRotate();
+
+
+
+
+
+// ==============================
+// PAUSE SLIDER ON HOVER / TOUCH
+// ==============================
+
+
+gallery.addEventListener("mouseenter",()=>{
+
+    clearInterval(autoRotate);
+
+});
+
+
+
+gallery.addEventListener("mouseleave",()=>{
+
+    startAutoRotate();
+
+});
+
+
+
+
+// MOBILE TOUCH SUPPORT
+
+
+gallery.addEventListener("touchstart",()=>{
+
+    clearInterval(autoRotate);
+
+});
+
+
+
+gallery.addEventListener("touchend",()=>{
+
+    startAutoRotate();
+
+});
+
+
+
+
+// VIDEO PLAY
+
+
+const galleryVideos =
+document.querySelectorAll(".gallery-carousel video");
+
+
+galleryVideos.forEach(video=>{
+
+
+    video.addEventListener("mouseenter",()=>{
+
+        clearInterval(autoRotate);
+
+        video.play();
 
     });
 
-}
+
+
+    video.addEventListener("mouseleave",()=>{
+
+        video.pause();
+
+        video.currentTime = 0;
+
+        startAutoRotate();
+
+    });
+
+
+
+    // Mobile tap
+
+    video.addEventListener("click",()=>{
+
+        clearInterval(autoRotate);
+
+        video.play();
+
+    });
+
+
+
+});
