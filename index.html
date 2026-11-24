@@ -30,36 +30,47 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="slides">
-        <div class="slide active"
-          style="--bg:url('./assets/header slide.avif')">
-          <div class="hero-content"><span>Premium Auto Accessories</span>
-            <h1>Upgrade Your <b>Drive</b></h1>
-            <p>Stylish, comfort and performance accessories for every car.</p><a class="btn" href="#products">Explore
-              Collection <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="slide"
-          style="--bg:url('./assets/header slide 2.avif')">
-          <div class="hero-content"><span>Interior Styling</span>
-            <h1>Comfort Meets <b>Luxury</b></h1>
-            <p>Seat covers, ambient lighting, mats and complete interior upgrades.</p><a class="btn"
-              href="#category">View Categories <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="slide"
-          style="--bg:url('./assets/header slide 3.avif')">
-          <div class="hero-content"><span>Performance Zone</span>
-            <h1>Built For <b>Style</b></h1>
-            <p>All-in-one accessories for protection, lighting, care and performance.</p><a class="btn"
-              href="#contact">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <button class="hero-arrow left" onclick="moveHero(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="hero-arrow right" onclick="moveHero(1)"><i class="fa-solid fa-chevron-right"></i></button>
-      <div class="dots" id="dots"></div>
-    </section>
+
+  <!-- BACKGROUND VIDEO -->
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto">
+
+    <source
+      src="./assets/video hero.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+
+    <span>Premium Auto Accessories</span>
+
+    <h1>
+      Upgrade Your <b>Drive</b>
+    </h1>
+
+    <p>
+      Stylish, comfort and performance
+      accessories for every car.
+    </p>
+
+    <a class="btn" href="#products">
+      Explore Collection
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+  </div>
+
+</section>
 
     <section class="run-text">
       <div><span>LED Headlights</span><span>Premium Seat Covers</span><span>Car Mats</span><span>Ambient
@@ -214,7 +225,7 @@
     <section class="about section" id="about">
       <div class="container about-grid">
         <div class="about-img"><img
-            src="./assets/aboutus.avif"></div>
+            src="./assets/aboutus.png"></div>
         <div class="about-text">
           <div class="title left-title">
             <h2>About Us</h2>
@@ -230,17 +241,17 @@
 
     <section class="section container promo-grid">
       <div class="promo"
-        style="--bg:url('./assets/summer.avif')">
+        style="--bg:url('./assets/summer.png')">
         <h3>Summer Sale</h3>
         <h2>Up to 30% OFF</h2><a>Shop Now</a>
       </div>
       <div class="promo"
-        style="--bg:url('./assets/new.avif')">
+        style="--bg:url('./assets/new.png')">
         <h3>New Arrivals</h3>
         <h2>Latest Premium Accessories</h2><a>Explore Now</a>
       </div>
       <div class="promo"
-        style="--bg:url('./assets/performance down.avif')">
+        style="--bg:url('./assets/performance down.png')">
         <h3>Performance</h3>
         <h2>That Thrills</h2><a>View More</a>
       </div>
@@ -248,7 +259,7 @@
 
     <section class="why-dark">
       <div class="why-img">
-        <img src="./assets/why chooseus.avif">
+        <img src="./assets/why chooseus.png">
       </div>
 
       <div class="why-content">
