@@ -4122,3 +4122,302 @@ padding:12px 18px;
     }
 
 }
+
+
+/* =========================================
+   HERO VIDEO BACKGROUND
+========================================= */
+
+.hero .slide {
+    overflow: hidden;
+    isolation: isolate;
+    pointer-events: none;
+}
+
+.hero .slide.active {
+    pointer-events: auto;
+}
+
+/* VIDEO SLIDE */
+
+.hero .video-slide {
+    background: #020b18;
+}
+
+/* FULL WIDTH VIDEO */
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* DARK GRADIENT OVER VIDEO */
+
+.hero .video-slide::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(2, 11, 24, 0.85) 0%,
+        rgba(6, 19, 38, 0.55) 45%,
+        rgba(6, 19, 38, 0.10) 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* TEXT ABOVE VIDEO */
+
+.hero-content {
+    z-index: 2;
+}
+
+/* SLIDER CONTROLS */
+
+.hero-arrow,
+.dots {
+    z-index: 10;
+}
+
+/* MOBILE VIDEO */
+
+@media (max-width: 600px) {
+
+    .hero-video {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero .video-slide::after {
+        background: linear-gradient(
+            90deg,
+            rgba(2, 11, 24, 0.80),
+            rgba(2, 11, 24, 0.25)
+        );
+    }
+}
+
+/* =========================================
+   SANGAM CINEMATIC VIDEO HERO
+========================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+    background: #020b18;
+    isolation: isolate;
+}
+
+/* BACKGROUND VIDEO */
+
+.hero .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* DARK OVERLAY FOR TEXT VISIBILITY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(2, 11, 24, 0.88) 0%,
+        rgba(2, 11, 24, 0.65) 35%,
+        rgba(2, 11, 24, 0.25) 70%,
+        rgba(2, 11, 24, 0.10) 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* HERO TEXT */
+
+.hero .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+    transform: translateY(-50%);
+
+    width: min(700px, 85%);
+
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+
+    color: #ffffff;
+
+    animation: fadeUp 1s ease;
+}
+
+/* SMALL TITLE */
+
+.hero .hero-content span {
+    display: inline-block;
+
+    color: #ffc226;
+    background: rgba(0, 20, 50, 0.65);
+
+    border: 1px solid #ffc226;
+    border-radius: 50px;
+
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: 900;
+
+    margin-bottom: 25px;
+}
+
+/* MAIN HEADING */
+
+.hero .hero-content h1 {
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 1.05;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+    margin-bottom: 25px;
+}
+
+.hero .hero-content h1 b {
+    color: #ffc226;
+}
+
+/* DESCRIPTION */
+
+.hero .hero-content p {
+    color: #ffffff;
+
+    font-size: 24px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* BUTTON */
+
+.hero .hero-content .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #ffc226;
+    color: #061a36;
+
+    padding: 18px 28px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: 900;
+
+    transition: 0.3s ease;
+}
+
+.hero .hero-content .btn:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        height: 620px;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero .hero-content p {
+        font-size: 21px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 560px;
+    }
+
+    .hero .hero-video {
+        object-position: center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(2, 11, 24, 0.80),
+            rgba(2, 11, 24, 0.35)
+        );
+    }
+
+    .hero .hero-content {
+        left: 6%;
+        width: 88%;
+    }
+
+    .hero .hero-content span {
+        font-size: 14px;
+        padding: 10px 18px;
+        margin-bottom: 20px;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    .hero .hero-content p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .hero .hero-content .btn {
+        font-size: 13px;
+        padding: 15px 20px;
+    }
+}
