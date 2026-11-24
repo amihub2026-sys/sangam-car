@@ -4420,4 +4420,17 @@ padding:12px 18px;
         font-size: 13px;
         padding: 15px 20px;
     }
+
+    
+
+}
+
+/* Hide product slider arrows on desktop only */
+
+@media (min-width: 769px) {
+
+    #products .product-arrow {
+        display: none !important;
+    }
+
 }
